@@ -8,7 +8,7 @@
 
 	<h1 class="center">Javascript practise</h1>
 	<p class="center">Refresh the page to practise with new values</p>
-	<p class="center small"> Last updated: 23/02/2020 - 12:21PM - Report any errors to Dylan </p>
+	<p class="center small"> Last updated: 23/02/2020 - 17:22PM - Report any errors to Dylan </p>
 	
 	
 	<div><br><span id="a"> </span><br>
@@ -150,6 +150,62 @@
 	<button onclick="document.getElementById('tS').innerHTML = tE";> Show explaination </button>
 	<br><span id="tO"> </span><br>
 	<span id="tS" class="grey"></span></div>
+	
+	<div><br><span id="v"></span><br>
+	<input type="text" id="vI">
+	<button onclick="check(vA,'vI','vO')"> Check Answer </button> 
+	<button onclick="document.getElementById('vS').innerHTML = vE";> Show explaination </button>
+	<br><span id="vO"> </span><br>
+	<span id="vS" class="grey"></span></div>
+
+	<div><br><span id="u"></span><br>
+	<input type="text" id="uI">
+	<button onclick="check(uA,'uI','uO')"> Check Answer </button> 
+	<button onclick="document.getElementById('uS').innerHTML = uE";> Show explaination </button>
+	<br><span id="uO"> </span><br>
+	<span id="uS" class="grey"></span></div>
+	
+	<div><br><span id="w"></span><br>
+	<input type="text" id="wI">
+	<button onclick="check(wA,'wI','wO')"> Check Answer </button> 
+	<button onclick="document.getElementById('wS').innerHTML = wE";> Show explaination </button>
+	<br><span id="wO"> </span><br>
+	<span id="wS" class="grey"></span></div>
+	
+	<div><br><span id="aa"></span><br>
+	<input type="text" id="aaI">
+	<button onclick="check(aaA,'aaI','aaO')"> Check Answer </button> 
+	<button onclick="document.getElementById('aaS').innerHTML = aaE";> Show explaination </button>
+	<br><span id="aaO"> </span><br>
+	<span id="aaS" class="grey"></span></div>
+	
+	<div><br><span id="ab"></span><br>
+	<input type="text" id="abI">
+	<button onclick="check(abA,'abI','abO')"> Check Answer </button> 
+	<button onclick="document.getElementById('abS').innerHTML = abE";> Show explaination </button>
+	<br><span id="abO"> </span><br>
+	<span id="abS" class="grey"></span></div>
+	
+	<div><br><span id="ac"></span><br>
+	<input type="text" id="acI">
+	<button onclick="check(acA,'acI','acO')"> Check Answer </button> 
+	<button onclick="document.getElementById('acS').innerHTML = acE";> Show explaination </button>
+	<br><span id="acO"> </span><br>
+	<span id="acS" class="grey"></span></div>
+	
+	<div><br><span id="ad"></span><br>
+	<input type="text" id="adI">
+	<button onclick="check(adA,'adI','adO')"> Check Answer </button> 
+	<button onclick="document.getElementById('adS').innerHTML = adE";> Show explaination </button>
+	<br><span id="adO"> </span><br>
+	<span id="adS" class="grey"></span></div>
+	
+	<div><br><span id="ae"></span><br>
+	<input type="text" id="aeI">
+	<button onclick="check(aeA,'aeI','aeO')"> Check Answer </button> 
+	<button onclick="document.getElementById('aeS').innerHTML = aeE";> Show explaination </button>
+	<br><span id="aeO"> </span><br>
+	<span id="aeS" class="grey"></span></div>
 	
 </body>
 
@@ -296,33 +352,86 @@
 	var pA = false;
 	if(pV1>=pV2) pA = true;
 	document.getElementById("p").innerHTML = "var ans = false; <br> if('"+pV1+"'>='"+pV2+"'){<br>ans = true;<br>} <br> <br> ans = ?;";
-	var pE = "I actually dont know, I've emailed Dr Li to find out - my current theory is that: String comparison will convert all the characters in a string to their Ascii values, and then compare the sum of those characters. Remember there are multiple ways to write if() else statements."
+	var pE = "I actually dont know, I've emailed Dr Li to find out - my current theory is that: String comparison will convert all the characters in a string to their Ascii values, and then compare the sum of those characters. Remember there are multiple ways to write if() else statements.";
 	
 	var qV = getRandStr(getLowInt()+1);
 	var qA = qV.length;
 	document.getElementById("q").innerHTML = "('"+qV+"').length;";
-	var qE = "Gets the length of a string or array. String with one character has length of 1."
+	var qE = "Gets the length of a string or array. String with one character has length of 1.";
 	
 	var rV1 = getRandStr(6);
 	var rV2 = getLowInt();
 	var rV3 = rV1.charAt(rV2);
 	var rA = rV1.indexOf(rV3);
 	document.getElementById("r").innerHTML = "s='"+rV1+"';<br> s.indexOf('"+rV3+"');";
-	var rE = "Gets the position of the first occurance of "+rV3+" in the string. Remember the first character in the string has an index of 0."
+	var rE = "Gets the position of the first occurance of "+rV3+" in the string. Remember the first character in the string has an index of 0.";
 	
 	var sV1 = rV1;
 	var sV2 = rV2;
 	var sV3 = sV1.charAt(sV2)+sV1.charAt(sV2+1);
 	var sA = sV1.indexOf(sV3);
 	document.getElementById("s").innerHTML = "s='"+sV1+"';<br> s.indexOf('"+sV3+"');";
-	var sE = "Gets the position of "+sV1.charAt(sV2)+" at the first occurance of "+sV3+" in the string. Remember the first character in the string has an index of 0."
+	var sE = "Gets the position of "+sV1.charAt(sV2)+" at the first occurance of "+sV3+" in the string. Remember the first character in the string has an index of 0.";
 	
 	var tV1 = getRandStr(6);
 	var tV2 = getLowInt();
 	var tA = tV1.charAt(tV2);
 	document.getElementById("t").innerHTML = "var MyString='"+tV1+"';<br> MyString.charAt('"+tV2+"');";
-	var tE = "Gets the character at the position " + tV2 + " in the string. Remember the string index starts at 0 so the position of the 1st character in the string will be 0."
+	var tE = "Gets the character at the position " + tV2 + " in the string. Remember the string index starts at 0 so the position of the 1st character in the string will be 0.";
 	
+	var vV1 = getRandStr(getLowInt());
+	var vV2 = getRandStr(5);
+	var vA =  vV1 + vV2;
+	document.getElementById("v").innerHTML = "'"+vV1 + "' + '"+vV2+"';";
+	var vE = "Concatenates the two strings together.";
+	
+	var uV1 = getRandInt();
+	var uV2 = getRandVar();
+	var uA =  String(uV1) + String(uV2);
+	document.getElementById("u").innerHTML = "String("+uV1+")+String("+uV2+");";
+	var uE = "Turns what is inside the parameters into strings and concatenates those two strings together.";
+	
+	var wV1 = getLowInt();
+	var wV2 = getLowInt();
+	var wV3 = Math.min(wV1,wV2);
+	var wV4 = Math.max(wV1,wV2);
+	var wV5 = getLowInt();
+	var wV6 = getLowInt();
+	var wA = wV5;
+	for(var i = wV3; i <= wV4; i++){
+		wA += wV6 + i;
+	}	
+	document.getElementById("w").innerHTML = "var j = "+wV5+"; <br>for(var i = "+wV3+"; i <= "+wV4+"; i++){j += "+wV6+" + i;}";
+	var wE = "A for loop that adds "+wV6+" and i to j with each loop.";
+	
+	var aaV1 = getRandInt(); //aa variable 1
+	var aaA = aaV1;
+	document.getElementById("aa").innerHTML = aaV1++ +"++ returns ?";
+	var aaE = "++variable increments the variable, returning the new value. variable++ increments the variable, but returns the old value. --variable decrements the variable, returning the new value. variable-- decrements the variable, but returns the old value. If the ++ or -- is after the variable, it does the increment/decrement after returning the var.";
+	
+	var abV1 = getRandInt(); 
+	var abA = abV1 + 1;
+	document.getElementById("ab").innerHTML = "++("+ abV1 +") returns ?";
+	var abE = "++variable increments the variable, returning the new value. variable++ increments the variable, but returns the old value. --variable decrements the variable, returning the new value. variable-- decrements the variable, but returns the old value. If the ++ or -- is after the variable, it does the increment/decrement after returning the var.";
+	
+	var acV1=["red","orange","yellow","green","blue","purple"];
+	var acV2=getLowInt();
+	var acA = acV1[acV2];
+	document.getElementById("ac").innerHTML = "var arr = ['red','orange','yellow','green','blue','beige']; <br> arr["+acV2+"];";
+	var acE = "Array[n] gets the nth element from an array, remember indexing starts at 0.";
+	
+	var adV1 = getRandInt(); 
+	var adV2 = getLowInt();
+	var adA = adV1 % adV2;
+	document.getElementById("ad").innerHTML = adV1+"%"+adV2;
+	var adE = "Does a/b and returns the remainder.";
+
+	var aeV1 = getRandInt(); 
+	var aeV2 = getLowInt();
+	var aeA = aeV1;
+	aeA += aeV2;
+	document.getElementById("ae").innerHTML = aeV1+"+="+aeV2;
+	var aeE = "Does a = a + b.";
 </script>	
 
 <style>
